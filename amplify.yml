@@ -6,11 +6,14 @@ frontend:
         - wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.10.5-stable.tar.xz
         - tar xf flutter_linux_2.10.5-stable.tar.xz
         - export PATH=$PATH:$PWD/flutter/bin
+        - flutter doctor
     build:
       commands:
-        - flutter doctor
         - flutter build web
   artifacts:
     baseDirectory: build/web
     files:
       - "**/*"
+  cache:
+    paths:
+      - build/web/**/*

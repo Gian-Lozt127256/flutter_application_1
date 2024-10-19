@@ -37,3 +37,8 @@ EXPOSE 80
 
 # Configurar nginx para servir la aplicación
 CMD ["nginx", "-g", "daemon off;"]
+
+
+
+
+
